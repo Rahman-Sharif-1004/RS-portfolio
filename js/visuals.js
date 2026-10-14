@@ -90,6 +90,47 @@
     return wrap('Illustration of a phishing risk dashboard with authentication checks and a high-risk gauge', s);
   }
 
+  /* ---------- NEVIXA 2K26: symposium website (red + gold, matches the real site) ---------- */
+  function symposium() {
+    var s = '<defs>' +
+      '<radialGradient id="nvMoon" cx="40%" cy="38%" r="65%"><stop offset="0" stop-color="#d8401f"/><stop offset=".6" stop-color="#8a1608"/><stop offset="1" stop-color="#3a0000"/></radialGradient>' +
+      '<radialGradient id="nvHalo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ec240e" stop-opacity=".32"/><stop offset="1" stop-color="#ec240e" stop-opacity="0"/></radialGradient>' +
+      '<clipPath id="nvBand"><rect x="0" y="220" width="400" height="18"/></clipPath></defs>';
+    s += '<rect width="400" height="250" fill="#0a0000"/>';
+    /* stars */
+    var st = [[40,70],[92,40],[150,62],[246,36],[288,92],[372,40],[60,118],[352,120],[120,26],[210,70]];
+    st.forEach(function (p, i) { s += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="' + (i % 3 ? .8 : 1.2) + '" fill="#f5f0e8" opacity="' + (.25 + (i % 4) * .12) + '"/>'; });
+    /* red moon */
+    s += '<circle cx="330" cy="64" r="46" fill="url(#nvHalo)"><animate attributeName="opacity" values=".6;1;.6" dur="4s" repeatCount="indefinite"/></circle>';
+    s += '<circle cx="330" cy="64" r="17" fill="url(#nvMoon)"/><circle cx="335" cy="60" r="3" fill="#000" opacity=".25"/><circle cx="325" cy="71" r="2" fill="#000" opacity=".25"/>';
+    /* mountains */
+    s += '<path d="M0 222 L0 190 Q30 170 62 186 Q96 160 132 184 Q168 158 204 182 Q246 150 286 180 Q324 160 356 182 Q384 172 400 184 L400 222 Z" fill="#150202"/>';
+    s += '<path d="M0 222 L0 204 Q48 190 96 202 Q150 186 204 200 Q262 184 316 200 Q362 192 400 202 L400 222 Z" fill="#090000"/>';
+    /* torii gate */
+    s += '<g fill="#7b1010" opacity=".9"><rect x="52" y="176" width="3.5" height="30"/><rect x="74" y="176" width="3.5" height="30"/><path d="M46 177 Q65 170 84 177 L84 181 Q65 175 46 181 Z"/><rect x="52" y="186" width="26" height="2.5"/></g>';
+    /* HUD */
+    s += '<text x="22" y="26" ' + fontAttr + ' font-size="9" fill="#8fa1b5" letter-spacing="1">EVENTS</text><text x="22" y="46" ' + fontAttr + ' font-size="18" font-weight="700" fill="#d4a01a">07</text>';
+    /* college line */
+    s += '<text x="200" y="76" text-anchor="middle" ' + fontAttr + ' font-size="7.5" fill="#d4a01a" letter-spacing="2">MAMCET &#183; CSE DEPARTMENT</text>';
+    /* title */
+    s += '<text x="200" y="116" text-anchor="middle" font-family="Sora, sans-serif" font-size="46" font-weight="800" letter-spacing="2" fill="none" stroke="#ec240e" stroke-width="1.6">NEVIXA</text>';
+    s += '<text x="200" y="116" text-anchor="middle" font-family="Sora, sans-serif" font-size="46" font-weight="800" letter-spacing="2" fill="#ec240e" opacity=".14">NEVIXA</text>';
+    s += '<text x="200" y="138" text-anchor="middle" font-family="Sora, sans-serif" font-size="15" font-weight="700" letter-spacing="9" fill="#d4a01a">2K26</text>';
+    /* info pills */
+    var pills = [['28 MAR', 56], ['NEWTON HALL', 84], ['&#8377;200', 48]], x = 98;
+    pills.forEach(function (p) {
+      s += '<rect x="' + x + '" y="150" width="' + p[1] + '" height="18" rx="2" fill="rgba(236,36,14,.1)" stroke="rgba(236,36,14,.5)"/>';
+      s += '<text x="' + (x + p[1] / 2) + '" y="162" text-anchor="middle" ' + fontAttr + ' font-size="8" fill="#f5f0e8" letter-spacing=".8">' + p[0] + '</text>';
+      x += p[1] + 8;
+    });
+    /* register button */
+    s += '<polygon points="166,176 242,176 238,192 162,192" fill="#ec240e"/><text x="202" y="188" text-anchor="middle" ' + fontAttr + ' font-size="8" font-weight="700" fill="#f5f0e8" letter-spacing="2">REGISTER</text>';
+    /* ticker band */
+    s += '<rect x="0" y="220" width="400" height="18" fill="#ec240e"/>';
+    s += '<g clip-path="url(#nvBand)"><text y="232" ' + fontAttr + ' font-size="7.5" fill="#f5f0e8" letter-spacing="1.6">PAPER PRESENTATION &#183; CODE DEBUG &#183; UI-UX &#183; CRITICAL THINK &#183; CODE CONNECT &#183; SHORT FILM &#183; QUIZ &#183; PAPER PRESENTATION &#183; CODE DEBUG<animateTransform attributeName="transform" type="translate" from="400 0" to="-620 0" dur="18s" repeatCount="indefinite"/></text></g>';
+    return wrap('Illustration of the NEVIXA 2K26 symposium website with event details and registration', s);
+  }
+
   /* ---------- Generic fallback for new projects ---------- */
   function generic(title) {
     var initials = (title || 'P').split(/\s+/).map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
@@ -100,5 +141,5 @@
     return wrap('Project preview', s);
   }
 
-  window.PROJECT_VISUALS = { keyboard: keyboard, campus: campus, mailguard: mailguard, generic: generic };
+  window.PROJECT_VISUALS = { keyboard: keyboard, campus: campus, mailguard: mailguard, symposium: symposium, generic: generic };
 })();

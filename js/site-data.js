@@ -115,9 +115,23 @@ window.SITE_DATA = {
         "Colour-coded risk dashboard with an itemised reasoning panel and automatic escalation rules for spoofed links and authentication failures."
       ],
       tags: ["Python", "Flask", "scikit-learn", "pandas", "tldextract", "NLP"],
-      github: "",
-      live: ""
-    }
+      github: "https://github.com/Rahman-Sharif-1004/mailguard.git",
+      live: "https://mailguard-hxae.onrender.com/"
+    },
+    {
+       title: "NEVIXA-2K26",
+       subtitle: "College Symposium Website",
+       category: "Front-End Website",
+       visual: "symposium",
+       points: [
+         "What you built and what it does.",
+         "A result or number, if you have one."
+       ],
+       tags: ["HTML", "CSS" ,"javaScript",],
+       github: "https://github.com/Rahman-Sharif-1004/nevixa-2K26-mamcet.git",
+       live: "https://nevixa-2k26.netlify.app/"
+     }
+
   ],
 
 
@@ -167,7 +181,7 @@ window.SITE_DATA = {
         "Developed and maintained responsive user interfaces using HTML, CSS and JavaScript.",
         "Collaborated with backend developers to improve web performance."
       ],
-      certificate: "assets/certificates/jj-consultancy-internship.pdf"
+      certificate: "assets/certificates/jj-consultancy-intern.pdf"
     },
     {
       role: "Python Developer Intern",
@@ -179,7 +193,7 @@ window.SITE_DATA = {
         "Engineered Python scripts for data processing and workflow automation.",
         "Assisted in debugging and testing code for internal tools."
       ],
-      certificate: "assets/certificates/scopik-edutech-internship.pdf"
+      certificate: "assets/certificates/scopik-edutech-intern.pdf"
     },
     {
       role: "Full Stack Developer Intern",
@@ -191,7 +205,7 @@ window.SITE_DATA = {
         "Developed mini full stack projects using HTML, CSS, JS and MongoDB.",
         "Integrated client-side interfaces with backend services and MongoDB databases."
       ],
-      certificate: "assets/certificates/novitech-internship.pdf"
+      certificate: "assets/certificates/novitech-intern.pdf"
     },
     {
       role: "Cyber Security Intern",
@@ -202,7 +216,7 @@ window.SITE_DATA = {
       points: [
         "Built MailGuard, an email phishing detection web app (see Projects)."
       ],
-      certificate: "assets/certificates/alfrah-cognix-internship.pdf"
+      certificate: "assets/certificates/alfrah-cognix-intern.pdf"
     }
   ],
 
@@ -234,11 +248,11 @@ window.SITE_DATA = {
      },
      ================================================================= */
   certifications: [
-    { title: "Web Application Development", issuer: "Jeyram Education Trust", details: "Central Govt. Certified · 6 months, offline", certificate: "assets/certificates/web-application-development.pdf" },
+    { title: "Web Application Development", issuer: "Jeyram Education Trust", details: "Central Govt. Certified · 6 months, offline", certificate: "assets/certificates/web-application-development-course.pdf" },
+     { title: "AWS - Cloud Architecting", issuer: "Amazon Web Services Academy", details: "21 days, offline", certificate: "assets/certificates/aws-ict-course.pdf" },
     { title: "Python Full Stack", issuer: "Code 99 IT Academy", details: "5 montns, online", certificate: "assets/certificates/coming-soon.pdf" },
-    { title: "AWS - Cloud Architecting", issuer: "Amazon Web Services Academy", details: "21 days, offline", certificate: "assets/certificates/coming-soon.pdf" },
+    { title: "Cyber Security", issuer: "Alfrah Cognix Innovations Pvt Ltd", details: "3 months, online", certificate: "assets/certificates/cyber-security-course.pdf" }
     // { title: "UI/UX for Beginners", issuer: "Great Learning", details: "15 days, online", certificate: "assets/certificates/ui-ux-for-beginners.pdf" },
-    { title: "Cyber Security", issuer: "Alfrah Cognix Innovations Pvt Ltd", details: "3 months, online", certificate: "assets/certificates/cyber-security.pdf" }
   ],
 
 
@@ -261,14 +275,14 @@ window.SITE_DATA = {
       title: "Runner-Up: Zero Hour",
       subtitle: "Rapid Prototyping & AI-Assisted Development",
       description: "National Level Technical Symposium at JJ College Of Engineering And Technology.",
-      certificate: "assets/certificates/zero-hour-runner-up.pdf"
+      certificate: "assets/certificates/zero-hour-runner-up-sympo.pdf"
     },
     {
       place: "2nd",
       title: "Runner-Up: Final Hire",
       subtitle: "Mock Recruitment & Interview Simulation",
       description: "National Level Technical Symposium at JJ College Of Engineering And Technology.",
-      certificate: "assets/certificates/final-hire-runner-up.pdf"
+      certificate: "assets/certificates/final-hire-runner-up-sympo.pdf"
     }
   ],
 
